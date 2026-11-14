@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आराधना भवन | विमलनाथ मंदिर के पास, राजस्थान</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root {
+            --maroon: #800000;
+            --saffron: #ff6600;
+            --gold: #d4af37;
+            --light-gold: #fff9e6;
+            --cream: #fffdf7;
+            --dark: #2c1810;
+            --green: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', 'Tiro Devanagari Hindi', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Top Religious Banner */
+        .shri-banner {
+            background: linear-gradient(90deg, var(--maroon), var(--saffron), var(--maroon));
+            color: #fff;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #ffffff;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            border-bottom: 2px solid #f5e6c8;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--maroon);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--saffron);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 24, 16, 0.72), rgba(128, 0, 0, 0.78)), 
+                        url('https://unsplash.com') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 6px solid var(--gold);
+        }
+
+        .swastik-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--gold);
+            color: #ffe082;
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 3px 8px rgba(0,0,0,0.6);
+            color: #fff;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #ffecb3;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .hero-address {
+            font-size: 1.05rem;
+            color: #f8f9fa;
+            margin-bottom: 30px;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 26px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-call {
+            background: linear-gradient(45deg, var(--saffron), #e65100);
+            color: white;
+        }
+
+        .btn-wa {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+        }
+
+        .btn-gold {
+            background: linear-gradient(45deg, var(--gold), #b8860b);
+            color: #fff;
+        }
+
+        /* Section Styling */
+        .section {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .sec-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .sec-header span {
+            color: var(--saffron);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sec-header h2 {
+            font-size: 2.2rem;
+            color: var(--maroon);
+            margin-top: 5px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .sec-header h2::after {
+            content: "❖";
+            position: absolute;
+            bottom: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gold);
+            font-size: 1.2rem;
+            background: var(--cream);
+            padding: 0 10px;
+        }
+
+        /* Divine & Building Showcase */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .showcase-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #f0dfb4;
+            box-shadow: 0 8px 20px rgba(128, 0, 0, 0.06);
+            transition: transform 0.3s;
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .showcase-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--gold);
+        }
+
+        .showcase-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .showcase-body h3 {
+            color: var(--maroon);
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+
+        /* Pricing Cards */
+        .pricing-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .rate-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            border: 2px solid #f5e6c8;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rate-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 7px;
+            background: linear-gradient(90deg, var(--maroon), var(--gold), var(--saffron));
+        }
+
+        .rate-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--light-gold);
+            color: var(--saffron);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 15px;
+            border: 2px solid var(--gold);
+        }
+
+        .rate-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--maroon);
+            margin: 10px 0;
+        }
+
+        .rate-amount small {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .rate-features {
+            list-style: none;
+            text-align: left;
+            margin: 20px 0 25px;
+            padding: 0 10px;
+        }
+
+        .rate-features li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rate-features li i {
+            color: #28a745;
+        }
+
+        /* Photo Gallery (User Uploaded Photos) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-frame {
+            background: #fff;
+            padding: 10px;
+            border-radius: 14px;
+            border: 2px solid #f0dfb4;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .photo-label {
+            text-align: center;
+            padding-top: 10px;
+            font-weight: 600;
+            color: var(--maroon);
+        }
+
+        /* Booking Form & Payment Section */
+        .booking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+
+        .form-card, .pay-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 18px;
+            border: 2px solid #f0dfb4;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--dark);
+        }
+
